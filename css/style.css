@@ -583,6 +583,9 @@ select:focus {
 .hero .hero-bg img:nth-child(11) {
     animation-delay: 60s;
 }
+.hero .hero-bg img:nth-child(12) {
+    animation-delay: 66s;
+}
 
 @keyframes heroFade {
     0% {
