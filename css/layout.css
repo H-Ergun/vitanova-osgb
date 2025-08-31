@@ -50,7 +50,7 @@
     padding: 0;
 }
 
-.h-menu a {
+.site-header .h-menu a {
     color: #0f172a;
     /* koyu renk → görünür */
     text-decoration: none;
@@ -60,12 +60,10 @@
     transition: background .2s ease, color .2s ease;
 }
 
-.h-menu a:hover,
-.h-menu a.is-active {
+.site-header .h-menu a:hover,
+.site-header .h-menu a.is-active {
     background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
-        color: #fff
-
-    /* hover olduğunda mavi ton */
+    color: #fff
 }
 
 /* CTA buton */
@@ -86,4 +84,174 @@
 .h-cta:hover {
     transform: translateY(-2px);
     opacity: .9;
+}
+
+:root {
+    --footer-bg: #0b2235;
+    --footer-fg: #e6edf6;
+    --footer-muted: #93a4b8;
+    --footer-accent: #22d3ee;
+    --footer-border: #0f2b44;
+}
+
+.site-footer {
+    background: var(--footer-bg);
+    color: var(--footer-fg);
+    border-top: 1px solid var(--footer-border);
+    padding: 40px 0 26px;
+}
+
+/* güvenli grid: yan sütunlar kaybolmaz */
+.site-footer .f-container {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(20px, 3vw, 48px);
+}
+
+/* başlıklar */
+.site-footer h4 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin: 8px 0 12px;
+    color: var(--footer-fg);
+}
+
+/* marka */
+.site-footer .f-logo {
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--footer-fg);
+    text-decoration: none;
+}
+
+.site-footer .f-logo span {
+    color: var(--footer-accent);
+}
+
+.site-footer .f-tag {
+    margin: 10px 0 14px;
+    font-size: 14px;
+    color: var(--footer-muted);
+    line-height: 1.6;
+    max-width: 46ch;
+}
+
+/* listeler & linkler */
+.site-footer .f-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.site-footer a {
+    color: var(--footer-fg);
+    text-decoration: none;
+    position: relative;
+    padding: 2px 0;
+}
+
+.site-footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background: var(--footer-accent);
+    transition: width .25s;
+}
+
+.site-footer a:hover {
+    color: var(--footer-accent);
+}
+
+.site-footer a:hover::after {
+    width: 100%;
+}
+
+/* iletişim satırı */
+.site-footer .f-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--footer-fg);
+}
+
+.site-footer .f-contact svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin-top: 2px;
+    fill: var(--footer-accent);
+}
+
+/* sosyal */
+.site-footer .f-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.site-footer .f-social a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--footer-border);
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--footer-fg);
+    transition: transform .18s, border-color .18s, color .18s, box-shadow .18s;
+    background: radial-gradient(120px 40px at 50% -40%, rgba(255, 255, 255, .06), transparent);
+}
+
+.site-footer .f-social a:hover {
+    color: var(--footer-accent);
+    border-color: var(--footer-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -10px rgba(34, 211, 238, .5);
+}
+
+.site-footer .f-social svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.site-footer .f-col {
+    min-width: 0;
+}
+
+/* alt şerit */
+.site-footer .f-bottom {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid var(--footer-border);
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    color: var(--footer-muted);
+    font-size: 13px;
+}
+
+.site-footer .f-bottom a {
+    color: var(--footer-muted);
+}
+
+.site-footer .f-bottom a:hover {
+    color: var(--footer-fg);
+}
+
+@media (max-width:640px) {
+    .site-footer .f-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

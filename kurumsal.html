@@ -171,15 +171,75 @@
     </section>
 
     <!-- Footer (generic) -->
-    <footer>
-        <div class="container section" style="padding:26px 0">
-            <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-                <div class="logo">ORNEK<span>OSGB</span></div>
-                <div style="color:var(--muted);font-size:14px">© <span id="y"></span> ORNEKOSGB. Tüm hakları saklıdır.
+    <footer class="site-footer">
+        <div class="f-container">
+            <!-- COL-1 -->
+            <section class="f-col f-brand">
+                <a href="/" class="f-logo">VITANOVA<span>OSGB</span></a>
+                <p class="f-tag">İşletmenizin sürdürülebilirliği için İSG süreçlerinizi yalın, ölçülebilir ve düzenli hale
+                    getiriyoruz.</p>
+                <div class="f-social">
+                    <a href="https://wa.me/900000000000" aria-label="WhatsApp" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.5 3.5A11.9 11.9 0 0 0 12 1 11 11 0 0 0 1 12a11.3 11.3 0 0 0 1.7 6L1 23l5.2-1.6A11.2 11.2 0 0 0 12 23a11 11 0 0 0 11-11c0-3-1.3-5.7-2.5-8.5zM12 21a9 9 0 0 1-4.6-1.2l-.3-.2-3.1 1 1-3-.2-.3A9 9 0 1 1 12 21zm5.1-6.6c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-1 1.1-.4.2-.7.1a7.3 7.3 0 0 1-3.6-3.2c-.3-.5.3-.5.8-1.7 0-.2 0-.4-.1-.6l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3a12.8 12.8 0 0 0 4.9 4c.7.3 1.3.5 1.7.6.7.2 1.3.1 1.8.1.6-.1 1.7-.7 1.9-1.4s.2-1.2.1-1.3-.2-.2-.5-.3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7zm6-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 9a3 3 0 1 1-.001 6.001A3 3 0 0 1 12 9z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H4zm4.6 16H6V10h2.6v9zM7.3 9c-.9 0-1.6-.7-1.6-1.6C5.7 6.6 6.4 6 7.3 6s1.6.7 1.6 1.6S8.2 9 7.3 9zM20 19h-2.6v-4.5c0-1.1-.4-1.9-1.4-1.9-.8 0-1.3.5-1.6 1.1-.1.2-.1.5-.1.8V19H11V10h2.5v1.3c.3-.5 1.1-1.5 2.7-1.5 1.9 0 3.8 1.2 3.8 4.2V19z" />
+                        </svg>
+                    </a>
                 </div>
-            </div>
+            </section>
+    
+            <!-- COL-2 -->
+            <nav class="f-col" role="navigation" aria-label="Hızlı Menü">
+                <h4>Hızlı Menü</h4>
+                <ul class="f-list">
+                    <li><a href="/kurumsal.html">Kurumsal</a></li>
+                    <li><a href="/faaliyetler.html">Faaliyet Alanlarımız</a></li>
+                    <li><a href="/iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+    
+            <!-- COL-3 -->
+            <section class="f-col">
+                <h4>İletişim</h4>
+                <ul class="f-list f-contact">
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                        </svg>Arnavutköy / İstanbul</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.4 22 2 13.6 2 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" />
+                        </svg>0 (212) 939 21 35</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" />
+                        </svg><a href="mailto:vitanovaosgb@gmail.com">vitanovaosgb@gmail.com</a></li>
+                </ul>
+            </section>
         </div>
-    </footer>   
+    
+        <div class="f-bottom">
+            <p>© <span id="year"></span> VITANOVAOSGB · Tüm Hakları Saklıdır.</p>
+            <div class="f-bottom-links"><a href="/kvkk.html">KVKK</a><span>·</span><a href="/cerez.html">Çerez
+                    Politikası</a></div>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 <script src="/scripts/global.js"></script>
