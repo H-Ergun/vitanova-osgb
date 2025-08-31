@@ -1,5 +1,7 @@
 :root {
     --header-h: 64px;
+    --brand-1: #0ea5e9;
+    --brand-2: #22d3ee;
 }
 
 .site-header {
@@ -60,8 +62,9 @@
 
 .h-menu a:hover,
 .h-menu a.is-active {
-    background: #f0f9ff;
-    color: #065f73;
+    background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+        color: #fff
+
     /* hover olduğunda mavi ton */
 }
 
