@@ -556,6 +556,34 @@ select:focus {
     animation-delay: 18s;
 }
 
+.hero .hero-bg img:nth-child(5) {
+    animation-delay: 24s;
+}
+
+.hero .hero-bg img:nth-child(6) {
+    animation-delay: 30s;
+}
+
+.hero .hero-bg img:nth-child(7) {
+    animation-delay: 36s;
+}
+
+.hero .hero-bg img:nth-child(8) {
+    animation-delay: 42s;
+}
+
+.hero .hero-bg img:nth-child(9) {
+    animation-delay: 48s;
+}
+
+.hero .hero-bg img:nth-child(10) {
+    animation-delay: 54s;
+}
+
+.hero .hero-bg img:nth-child(11) {
+    animation-delay: 60s;
+}
+
 @keyframes heroFade {
     0% {
         opacity: 0
