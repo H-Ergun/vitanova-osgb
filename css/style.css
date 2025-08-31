@@ -495,3 +495,203 @@ select:focus {
         gap: 10px;
     }
 }
+
+/* === Brand renkleri (logoya göre ayarlanabilir) === */
+:root {
+    --brand-600: #0ea5e9;
+    --brand-500: #22d3ee;
+    --brand-700: #0b2239;
+    --ink-900: #0f172a;
+}
+
+.btn {
+    background: var(--brand-600);
+}
+
+.menu a.active,
+.menu a:hover {
+    background: rgba(255, 255, 255, .08);
+}
+
+/* === HERO: çoklu arka plan slideshow === */
+.hero {
+    position: relative;
+    overflow: clip;
+    background: linear-gradient(135deg, #0b2239 0%, #0e7490 100%);
+    /* renkli degrade */
+}
+
+.hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero .hero-bg img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: heroFade 24s infinite;
+    filter: saturate(1.05) contrast(1.02);
+}
+
+/* 4 görsel sırayla görünür */
+.hero .hero-bg img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero .hero-bg img:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.hero .hero-bg img:nth-child(3) {
+    animation-delay: 12s;
+}
+
+.hero .hero-bg img:nth-child(4) {
+    animation-delay: 18s;
+}
+
+@keyframes heroFade {
+    0% {
+        opacity: 0
+    }
+
+    6% {
+        opacity: 1
+    }
+
+    24% {
+        opacity: 1
+    }
+
+    30% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+/* Hareket tercih etmeyenler için animasyonu kapat, ilk görseli sabitle */
+@media (prefers-reduced-motion: reduce) {
+    .hero .hero-bg img {
+        animation: none;
+    }
+
+    .hero .hero-bg img:nth-child(1) {
+        opacity: 1;
+    }
+}
+
+/* HERO içerik üstte kalsın */
+.hero>.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* === Responsive iyileştirmeler === */
+
+/* 1080↓: feature grid 3→2 kolona, KPI 3→3 kalır ama sıkışmaz */
+@media (max-width:1080px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 920↓: hero iki kolon → tek kolon, KPI 3→2, logos 5→3, map yüksekliği */
+@media (max-width:920px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        padding: 48px 0;
+    }
+
+    .kpis {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .logos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .map-bleed iframe {
+        height: 360px;
+    }
+}
+
+/* 720↓: feature grid 2→1, KPI 2→1, form satırları tek kolon, footer stack */
+@media (max-width:720px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .kpis {
+        grid-template-columns: 1fr;
+    }
+
+    .form .row {
+        grid-template-columns: 1fr;
+    }
+
+    footer .cols {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .map-bleed iframe {
+        height: 320px;
+    }
+}
+
+/* 520↓: logo alanları, buton ve badge mikro ayarlar */
+@media (max-width:520px) {
+    .badge {
+        top: -4px;
+    }
+
+    .btn {
+        padding: 11px 16px;
+        border-radius: 10px;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* === Floating map kartı: küçük ekranda daha iyi istif === */
+@media (max-width:920px) {
+    .floating-card {
+        width: min(680px, 94vw);
+    }
+}
+
+@media (max-width:720px) {
+    .floating-card {
+        bottom: 16px;
+        padding: 14px 16px;
+    }
+}
+
+/* Küçük dokunuşlar */
+.feature .icon {
+    background: #e0f2fe;
+    color: #075985;
+}
+
+.card {
+    border-radius: 16px;
+}
