@@ -1,0 +1,86 @@
+:root {
+    --header-h: 64px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+    /* beyaz zemin */
+    border-bottom: 1px solid #e6ebf0;
+    height: var(--header-h);
+}
+
+/* kapsayıcı */
+.h-container {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+}
+
+/* logo */
+.h-logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.4px;
+    color: #0f172a;
+    /* koyu renk → görünür */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.h-logo span {
+    color: #22d3ee;
+    /* markanın rengi */
+}
+
+/* menü */
+.h-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.h-menu a {
+    color: #0f172a;
+    /* koyu renk → görünür */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .2s ease, color .2s ease;
+}
+
+.h-menu a:hover,
+.h-menu a.is-active {
+    background: #f0f9ff;
+    color: #065f73;
+    /* hover olduğunda mavi ton */
+}
+
+/* CTA buton */
+.h-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--header-h) - 20px);
+    padding: 0 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #22d3ee, #06b6d4);
+    color: #001723;
+    /* koyu → kontrast var */
+    text-decoration: none;
+}
+
+.h-cta:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OSGB Kurumsal – Ana Sayfa</title>
+    <meta name="description"
+        content="İşyeri hekimi, İSG uzmanı, mobil sağlık, risk analizi ve eğitimler. Yasal uyum ve sürdürülebilir iş güvenliği çözümleri." />
+    <link rel="stylesheet" href="css/style.css"><!-- global -->
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div>
+                <span class="badge">6331 sayılı Kanun’a Uyum</span>
+                <h1>İş Sağlığı ve Güvenliğinde <br />Uçtan Uca Profesyonel Hizmet</h1>
+                <p>İşyeri hekimi, iş güvenliği uzmanı, periyodik muayene, ortam ölçümleri ve eğitimlerle
+                    işletmenizin yasal uyumunu güvence altına alıyoruz.</p>
+                <a class="btn" href="iletisim.html">Ücretsiz Ön Görüşme Al</a>
+                <div class="kpis">
+                    <div class="k">
+                        <div class="n">+100</div>
+                        <div class="t">Aktif Müşteri</div>
+                    </div>
+                    <div class="k">
+                        <div class="n">+15.000</div>
+                        <div class="t">Sağlık Muayenesi</div>
+                    </div>
+                    <div class="k">
+                        <div class="n">%98</div>
+                        <div class="t">Memnuniyet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Hızlı Teklif Formu</h3>
+            
+                <form id="hizliTeklifForm" class="form mt-16">
+                    <div class="row">
+                        <input name="sirket" required placeholder="Şirket Adı">
+                        <input name="nace" placeholder="Sektör (NACE)">
+                    </div>
+            
+                    <div class="row">
+                        <input name="calisanSayisi" type="number" min="1" placeholder="Çalışan Sayısı">
+                        <select name="tehlikeSinifi" required>
+                            <option value="">Tehlike Sınıfı</option>
+                            <option>Az Tehlikeli</option>
+                            <option>Tehlikeli</option>
+                            <option>Çok Tehlikeli</option>
+                        </select>
+                    </div>
+            
+                    <input name="email" type="email" placeholder="E-posta">
+                    <input id="telefonInput" name="telefon" required placeholder="Telefon (örn: 555 123 45 67)"
+                        pattern="^(\+90|0)?\s?5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$"
+                        title="Lütfen geçerli bir telefon girin (örn:555 123 45 67)">
+            
+                    <label class="small kvkk">
+                        <input type="checkbox" name="kvkk" value="Onaylıyorum" required>
+                        KVKK metnini okudum, kabul ediyorum.
+                    </label>
+                    
+                    <button class="btn" type="submit">Teklif İste</button>
+                </form>
+            
+                <!-- Başarı / hata mesajı -->
+                <div id="formMesaj" class="small muted"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler (Faaliyetlerden seçme) -->
+    <section class="section">
+        <div class="container">
+            <h2>Hizmet Başlıklarımız</h2>
+            <p class="lead">İhtiyacınıza uygun modüler hizmetler: aylık sözleşme, proje bazlı veya yerinde/mobil
+                çözümler.</p>
+
+            <div class="grid features">
+                <div class="feature card">
+                    <div class="icon">🩺</div>
+                    <div>
+                        <h3>İşyeri Hekimi</h3>
+                        <p>Periyodik sağlık gözetimi, muayene, işe giriş raporları ve poliklinik hizmetleri.</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <div class="icon">🛡️</div>
+                    <div>
+                        <h3>İSG Uzmanı</h3>
+                        <p>Risk değerlendirmesi, saha denetimleri, uygunsuzluk takibi ve yasal raporlar.</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <div class="icon">🚑</div>
+                    <div>
+                        <h3>Mobil Sağlık</h3>
+                        <p>Sahada akciğer grafisi, odyometri, hemogram ve portör muayeneleri.</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <div class="icon">📊</div>
+                    <div>
+                        <h3>Ortam Ölçümleri</h3>
+                        <p>Toz, gürültü, aydınlatma, VOC ve termal konfor ölçümleri (akredite çözüm ortakları).</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <div class="icon">📘</div>
+                    <div>
+                        <h3>Eğitimler</h3>
+                        <p>Temel İSG, yangın, ilkyardım, yüksekte çalışma ve mesleki eğitimler.</p>
+                    </div>
+                </div>
+                <div class="feature card">
+                    <div class="icon">🧭</div>
+                    <div>
+                        <h3>Acil Durum Planı</h3>
+                        <p>Tatbikatlar, ekip planları ve senaryolar ile olası risklere hazırlık.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="neden-biz card">
+                <h3>Neden Biz?</h3>
+                <div class="neden-grid">
+                    <div class="neden-item">
+                        <span class="icon">✔</span>
+                        <p>Yasal takvim ve hatırlatmalarla kesintisiz uyum</p>
+                    </div>
+                    <div class="neden-item">
+                        <span class="icon">✔</span>
+                        <p>Bulut dokümantasyon ve görsel denetim raporları</p>
+                    </div>
+                    <div class="neden-item">
+                        <span class="icon">✔</span>
+                        <p>Sektör bazlı risk kütüphanesi ve NACE deneyimi</p>
+                    </div>
+                    <div class="neden-item">
+                        <span class="icon">✔</span>
+                        <p>7/24 acil danışmanlık hattı</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-bleed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3002.4886273312213!2d28.72067637604957!3d41.189319571325726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDExJzIxLjYiTiAyOMKwNDMnMjMuNyJF!5e0!3m2!1str!2str!4v1755966247037!5m2!1str!2str" loading="lazy" allowfullscreen></iframe>
+        <div class="floating-card">
+            <h3>Ofisimiz</h3>
+            <p>İstanbul-Arnavutköy</p>
+            <a class="btn btn-primary" href="iletisim.html">Randevu Al</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+</body>
+<script src="/scripts/global.js"></script>
+<script>
+
+    document.getElementById("hizliTeklifForm").addEventListener("submit", async function (e) {
+        e.preventDefault(); // yönlendirmeyi engelle
+        const form = e.target;
+        const data = new FormData(form);
+
+        // 🔎 Telefon kontrolü
+        const telefon = document.getElementById("telefonInput");
+        const regex = /^(\+90|0)?\s?5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$/;
+        
+        if (!regex.test(telefon.value)) {
+            alert("Lütfen geçerli bir telefon numarası giriniz. (örn:555 123 45 67)");
+            telefon.focus();
+            return;
+        }
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/ergunhuseynn@gmail.com", {
+                method: "POST",
+                body: data,
+                headers: { "Accept": "application/json" }
+            });
+
+            const mesaj = document.getElementById("formMesaj");
+            mesaj.style.display = "block";
+
+            if (response.ok) {
+                mesaj.style.color = "#16a34a";
+                mesaj.textContent = "✅ Talebiniz alındı. En kısa sürede dönüş yapacağız.";
+                form.reset();
+            } else {
+                // Hata içeriğini da gör
+                const err = await response.text();
+                mesaj.style.color = "#b91c1c";
+                mesaj.textContent = "❌ Hata: " + err;
+            }
+        } catch (err) {
+            const mesaj = document.getElementById("formMesaj");
+            mesaj.style.display = "block";
+            mesaj.style.color = "#b91c1c";
+            mesaj.textContent = "⚠️ Bağlantı hatası. Lütfen internetinizi kontrol edin.";
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,310 @@
+/* ========== Temel Değişkenler ========== */
+:root {
+    --brand-1: #0ea5e9;
+    --brand-2: #22d3ee;
+    --ink: #0f172a;
+    --muted: #475569;
+    --line: #e6ebf0;
+    --bg: #ffffff;
+    --card: #ffffff;
+    --shadow: 0 20px 40px -24px rgba(2, 6, 23, .18);
+    --radius: 16px;
+}
+
+/* ========== Reset & Tipografi ========== */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* Bağlantılar */
+a {
+    color: var(--brand-1);
+    text-decoration: none
+}
+
+a:hover {
+    opacity: .9
+}
+
+/* Konteyner */
+.container {
+    width: min(1200px, 92%);
+    margin-inline: auto
+}
+
+/* ========== Header ========== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    height: 64px;
+}
+
+.h-container {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 64px;
+}
+
+.h-logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: .4px;
+    color: var(--ink)
+}
+
+.h-logo span {
+    color: var(--brand-2)
+}
+
+.h-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0
+}
+
+.h-menu a {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #0b1220
+}
+
+.h-menu a.active {
+    background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+    color: #fff
+}
+
+.h-cta {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+    color: #fff;
+    box-shadow: var(--shadow)
+}
+
+/* ========== Hero ========== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(1200px 300px at 10% 0%, rgba(34, 211, 238, .15), transparent 60%),
+        radial-gradient(1000px 260px at 90% 10%, rgba(14, 165, 233, .14), transparent 60%),
+        linear-gradient(180deg, #f8fdff 0%, #ffffff 70%);
+    border-bottom: 1px solid var(--line);
+}
+
+.hero .container {
+    padding: 56px 0 44px
+}
+
+.hero h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 0 0 10px
+}
+
+.hero .lead {
+    color: var(--muted);
+    max-width: 780px;
+    margin: 0
+}
+
+/* Dekoratif gradient blob */
+.hero-decor {
+    position: absolute;
+    inset: auto -120px -140px -120px;
+    height: 220px;
+    filter: blur(40px);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(14, 165, 233, .30), rgba(34, 211, 238, .10) 70%, transparent 100%);
+    pointer-events: none;
+}
+
+/* ========== Services Grid ========== */
+.services {
+    padding: 44px 0
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+}
+
+.card {
+    grid-column: span 6;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(14, 165, 233, .35);
+    box-shadow: 0 30px 60px -30px rgba(2, 6, 23, .22);
+}
+
+.card .icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(14, 165, 233, .12), rgba(34, 211, 238, .12));
+    color: var(--brand-1);
+    margin-bottom: 10px;
+}
+
+.card .icon svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor
+}
+
+.card h3 {
+    margin: 0 0 6px;
+    font-size: 18px
+}
+
+.card p {
+    margin: 0 0 10px;
+    color: var(--muted)
+}
+
+.bullets {
+    margin: 0;
+    padding-left: 18px;
+    color: #0b1220
+}
+
+.bullets li {
+    margin: 4px 0
+}
+
+/* 3 sütun için breakpoint geniş ekranda */
+@media (min-width: 1024px) {
+    .card {
+        grid-column: span 4
+    }
+}
+
+/* ========== CTA Strip ========== */
+.cta-strip {
+    padding: 28px 0 56px
+}
+
+.cta-box {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(14, 165, 233, .10), rgba(34, 211, 238, .10));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 22px 24px;
+}
+
+.cta-text h2 {
+    margin: 0 0 6px;
+    font-size: clamp(18px, 2.6vw, 24px)
+}
+
+.cta-text p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.cta-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 10px 14px;
+    background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+    color: #fff
+}
+
+.btn:hover {
+    transform: translateY(-1px)
+}
+
+.btn.btn-outline {
+    background: transparent;
+    color: var(--brand-1);
+    border: 2px solid rgba(14, 165, 233, .5)
+}
+
+/* ========== Footer ========== */
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 22px 0
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap
+}
+
+.f-menu a {
+    color: var(--muted);
+    margin-left: 16px
+}
+
+.f-menu a:hover {
+    color: var(--brand-1)
+}
+
+/* ========== Erişilebilirlik ========== */
+:focus-visible {
+    outline: 3px solid rgba(34, 211, 238, .7);
+    outline-offset: 3px
+}
+
+/* ========== Mobil İyileştirmeler ========== */
+@media (max-width:768px) {
+    .h-menu {
+        display: none
+    }
+
+    /* gerekirse hamburger ekleriz */
+    .h-cta {
+        display: none
+    }
+
+    .cta-box {
+        flex-direction: column;
+        align-items: flex-start
+    }
+}

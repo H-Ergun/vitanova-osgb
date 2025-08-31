@@ -1,0 +1,55 @@
+<div class="card">
+    <h3>İletişim Formu</h3>
+
+    <form class="form mt-16"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSeDbYBaVleNWKRrpCRlCWZ0bSzLxyQ-Hi6TddflAs9So6_kIA/formResponse"
+        method="POST" target="hidden_iframe" onsubmit="formGonderildi()">
+
+        <!-- Google Forms'un istediği GİZLİ ALANLAR -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="partialResponse" value='[null,null,"4838563030928822682"]'>
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" value="4838563030928822682">
+        <input type="hidden" name="submissionTimestamp" value="-1">
+
+        <!-- FORM ALANLARI (entry.* ID'leri) -->
+        <div class="row">
+            <input name="entry.1043692125" placeholder="Ad Soyad" required>
+            <input type="email" name="entry.1328882296" placeholder="E‑posta" required>
+        </div>
+
+        <div class="row">
+            <input type="tel" name="entry.544995458" placeholder="Telefon" required>
+            <input name="entry.336069797" placeholder="Şirket Adı">
+        </div>
+
+        <textarea name="entry.192970704" placeholder="Mesajınız" required></textarea>
+
+        <label class="small">
+            <input type="checkbox" name="entry.1318192358" value="KVKK" required>
+            KVKK metnini okudum, kabul ediyorum.
+        </label>
+
+        <!-- Bazı formlarda sorun çıkmaması için kalsın -->
+        <input type="hidden" name="submit" value="Submit">
+
+        <button class="btn" type="submit">Gönder</button>
+        <span class="small muted" id="formNote">KVKK kapsamında bilgileriniz korunur.</span>
+    </form>
+
+    <!-- Sayfa yenilenmeden arka planda POST -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <div id="formStatus" class="small mt-16" style="display:none; color:#16a34a;">
+        Teşekkürler! Mesajınız alındı.
+    </div>
+</div>
+
+<script>
+    function formGonderildi() {
+        const s = document.getElementById('formStatus');
+        const n = document.getElementById('formNote');
+        if (s) s.style.display = 'block';
+        if (n) n.style.display = 'none';
+    }
+</script>
