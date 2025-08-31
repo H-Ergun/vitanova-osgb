@@ -20,11 +20,18 @@
     </nav>
 </header> -->
 
+
+
 <header class="site-header">
     <div class="h-container h-nav">
         <a href="index.html" class="h-logo" title="Ana sayfa">
             VITANOVA<span>OSGB</span>
         </a>
+
+        <input id="navcheck" type="checkbox" class="navcheck" hidden>
+        <label for="navcheck" class="h-burger" aria-label="Menüyü aç/kapat">
+            <span></span>
+        </label>
 
         <nav class="h-menu">
             <ul>
@@ -43,6 +50,7 @@
     </div>
 </header>
 
+<label for="navcheck" class="nav-overlay" aria-hidden="true"></label>
 <!-- Header (tekil projede include edilebilir)
 <header  class="site-header">
     <div class="container nav">
